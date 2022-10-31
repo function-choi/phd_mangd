@@ -29,7 +29,7 @@ export default function Home() {
     const [AB, setAB] = useState(50);
     const changeValue = () => {
         axios
-            .get(`http://cheokcheok.poomang.com/calculate/${question}@${answer}`)
+            .get(`https://cheokcheok.poomang.com/calculate/${question}@${answer}`)
             .then((response: any) => {
                 response = JSON.parse(response.data.score)
                 console.log(response)
@@ -38,7 +38,6 @@ export default function Home() {
                 setTF(response["T-F(우호성)"])
                 setPJ(response["P-J(성실성)"])
                 setAB(response["A-B(신경성)"])
-
             });
     };
 
@@ -92,7 +91,7 @@ export default function Home() {
                                 />
                             </Box>
                             <Box>
-                                {/*<Text fontSize={"xl"} mb='8px'>답변 입력란</Text>*/}
+                                {/*<Text fontSize={"3xl"} mb='20px'>🧑‍💻 답변 입력란</Text>*/}
                                 {/*<Textarea*/}
                                 {/*    placeholder='답변을 입력해주세요'*/}
                                 {/*    size='2xl'*/}
